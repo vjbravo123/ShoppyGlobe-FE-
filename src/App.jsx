@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
+import { lazy, Suspense } from 'react';
 
 const ProductList = lazy(() => import('./components/ProductList'));
 const ProductDetail = lazy(() => import('./components/ProductDetail'));
@@ -12,6 +13,7 @@ const App = () => {
   return (
       <BrowserRouter>
         <Header />
+         <Suspense>
           <Routes>
             <Route path="/" element={<ProductList />} />
             <Route path="/product/:id" element={<ProductDetail />} />
@@ -19,6 +21,7 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          </Suspense>
         <Footer/>
       </BrowserRouter>
 
