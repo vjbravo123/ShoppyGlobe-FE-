@@ -5,6 +5,7 @@ import ProductDetail from './components/ProductDetail';
 import Cart from './components/Cart';
 import Checkout from './components/Checkout';
 import NotFound from './components/NotFound';
+import Footer from './components/Footer';
 
 
 
@@ -19,7 +20,9 @@ const App = () => {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+        <Footer/>
       </BrowserRouter>
+
   );
 };
 
