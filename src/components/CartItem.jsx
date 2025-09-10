@@ -1,4 +1,4 @@
-import React from "react";
+
 import { useDispatch } from "react-redux";
 import { increaseQty, decreaseQty, removeFromCart } from "../store/cartSlice";
 
